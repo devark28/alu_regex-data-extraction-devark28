@@ -8,6 +8,7 @@ const matchers = {
   phones: RegExp(/\(?\d{3}\)?[\.\-\s]\d{3}[\.\-\s]\d{4}/g),
   hashtags: RegExp(/#\w+/gi),
   cards: RegExp(/(\d{4}[\-\s]){3}\d{4}/g),
+  currencies: RegExp(/\$\d{1,3}(,\d{3})*\.\d{2}/g),
 };
 
 let results = {
@@ -15,6 +16,7 @@ let results = {
   phones: [],
   hashtags: [],
   cards: [],
+  currencies: [],
 };
 
 for(matcher in matchers){
